@@ -45,7 +45,8 @@ We hypothesize that the regular patterns mimic the behavior of the affected serv
 
 For the regular attacks, Recurrent Neural Networks with Long-short-term memory units can be utilized to effectively forecast the next waves of attacks. As seen in the following model, it’s able to pretty closely predict the volume of attacks that will happen next. With this knowledge, companies can prepare their defense for the attack ahead of time.
 
-![alt text](https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/forecast_with_RNN.png)
-
+<p align="center">
+  <img src="https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/forecast_with_RNN.png"/>
+</p>
 
 
