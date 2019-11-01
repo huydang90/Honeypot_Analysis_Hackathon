@@ -29,24 +29,39 @@ Deutsche Telekom operates a worldwide network of honeypots, computer systems tha
 
 Looking at the distribution of the attacks, it seems that the source of these attacks came mainly from Canada, the US, Russia and China. However, these are based on IP addresses which can be of the hosts that are affected by the hackers. Still, it gives us an interesting look at what countries are often chosen in the master-slave hierarchy. 
 
-![alt text](https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/attack_by_countries.png)
+<p align="center">
+  <img src="https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/attack_by_countries.png"/>
+</p>
+
 
 The more interesting insight comes by analyzing the time-series data of all the attacks on the honeypots. The frequency of these attacks shows a clear pattern of autocorrelation. It seems that every 2 days, the behavior of attack repeat itself, in terms of intensity and time. This is an important discovery as this means that there is a possibility of forecasting the next waves of attacks, which means the system administrator can better reinforce the network for potential hacking attempts. Unstationary time-series are impossible to forecast but those that have embedded autocorrelation can be accurately predicted to a certain margin. 
 
-![alt text](https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/overall_attack_time_series.png)
+<p align="center">
+  <img src="https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/overall_attack_time_series.png"/>
+</p>
+
 
 Looking further into the individual IP levels (of the top 20 bad IP addresses). It seems that there are 2 main patterns of attack: extreme regularity and extreme erraticity. 
 
 We hypothesize that the regular patterns mimic the behavior of the affected servers that the attackers used, i.e an user that turns on their home computers after a day at work or office computers that are operated at regular intervals of time. 
 
-![alt text](https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/top_IP_1.png)
+<p align="center">
+  <img src="https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/top_IP_1.png"/>
+</p>
 
-![alt text](https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/top_IP_6.png)
+<p align="center">
+  <img src="https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/top_IP_6.png"/>
+</p>
+
+### Solution Recommendation:
 
 For the regular attacks, Recurrent Neural Networks with Long-short-term memory units can be utilized to effectively forecast the next waves of attacks. As seen in the following model, it’s able to pretty closely predict the volume of attacks that will happen next. With this knowledge, companies can prepare their defense for the attack ahead of time.
 
 <p align="center">
   <img src="https://github.com/huydang90/Honeypot_Analysis_Hackathon/blob/master/Graphs/forecast_with_RNN.png"/>
 </p>
+
+For the irregular attacks, based on the database and libraries of known attacks, Generative Adversarial Neural Networks can be used to simulate new and unknown attacks that which can help to improve system defense as well. 
+
 
 
