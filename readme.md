@@ -6,6 +6,7 @@ Deutsche Telekom operates a worldwide network of honeypots, computer systems tha
 
 ### Codebook:
     
+    
     "vulnid"                      :   "CVE-ID of the attack classified, if available",
     "originalRequestString"       :   "Attack related information to be displayed on sicherheitstacho.eu, mostly URL of HTTP request (other data for other honeypot types)",
     "hostname"                    :   "Hostname of the honeypot, set by T-Pot 17.10 to random hostname during bootstrap",  
